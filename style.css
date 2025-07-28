@@ -87,6 +87,23 @@ body {
   text-shadow: 0 0 5px var(--cor-secundaria);
 }
 
+.imagens-lado-a-lado {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.imagens-lado-a-lado img {
+  width: 45%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 .conteudo {
   flex: 1;
   padding: 30px 40px;
