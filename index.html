@@ -3,81 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Missão na Bolívia</title>
+  <title>Missão Bolívia</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="topo">
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <h1>Missão na Bolívia</h1>
+  <header>
+    <div class="menu-bar">
+      <div class="logo">Missão Bolívia</div>
+      <nav id="nav-menu">
+        <a href="#inicio">Onde será?</a>
+        <a href="#sobre">Objetivo</a>
+        <a href="#servicos">Como Ajudar</a>
+      </nav>
+      <button id="menu-toggle">☰</button>
+    </div>
   </header>
-
-  <div class="container">
-    <nav class="menu-lateral" id="menuLateral">
+  <section class="hero" id="inicio">
+    <div class="text">
+      <h1>Onde será?</h1>
+      <p>A missão será realizada de <strong>08 a 18 de outubro de 2025</strong>, na cidade de <strong>Cochabamba</strong>, Bolívia. Durante esses 10 dias, os missionários oferecerão apoio ao Orfanato L’Esperance e participarão de atividades na Universidade Adventista da Bolívia.</p>
+    </div>
+    <div class="map-container">
+      <!-- COLE AQUI O IFRAME DO GOOGLE MAPS -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121835.
+        82683263262!2d-66.24627731246431!3d-17.394042196410833!2m3!1f0!2f0!3f0
+        !3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373e0d9e4ab27%3A0xa2719ae9532c3e65!2
+        sCochabamba%2C%20Bol%C3%ADvia!5e0!3m2!1spt-BR!2sbr!4v1753749084704!5m2!1spt-BR!2sbr" 
+       
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+  
+  <section class="help" id="sobre">
+    <div class="video-container">
+      <video autoplay muted loop playsinline>
+        <source src="video-missao.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+    </div>
+    <div class="text">
+      <h2>Objetivo da Missão</h2>
       <ul>
-        <li><button onclick="mostrarConteudo('para-onde')">Para onde vamos?</button></li>
-        <li><button onclick="mostrarConteudo('quem')">Quem iremos ajudar?</button></li>
-        <li><button onclick="mostrarConteudo('como')">Como iremos ajudar?</button></li>
-        <li><button onclick="mostrarConteudo('faca-parte')">Faça parte da missão!</button></li>
+        <li>Atuação em projetos sociais e humanitários</li>
+        <li>Evangelismo e convivência com as crianças</li>
+        <li>Reformas em espaços comunitários</li>
+        <li>Vivências espirituais e cultos inspiradores</li>
       </ul>
-    </nav>
+    </div>
+  </section>
+  
 
-    <section class="conteudo">
-      <div id="para-onde" class="secao-conteudo">
-        <h2>Para onde vamos?</h2>
-        <p>A missão terá inicio no dia 08/10/2025 e finalizada no dia 18/10/2025.
-		Durante esses 10 dias os missionarios darão assistencia para o Orfanato L'Esperance 
-		em Cochabamba, na Bolívia. Os alunos também farão atividades na Universidade Adventista da Bolívia,
-		 localizada em Cochabamba
-		</p>
-    <div class="imagens-lado-a-lado">
-        <img src="mapa.jpg" alt="Mapa da Bolívia" />
-        <img src="cochabamba.png" alt="Mapa da Bolívia" />
+  <section class="services" id="servicos">
+    <h2>Como Ajudar</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="image ajuda1-img"></div>
+        <p>Ore pelos missionários e pelas vidas impactadas</p>
       </div>
-
-      <div id="quem" class="secao-conteudo">
-        <h2>Quem iremos ajudar?</h2>
-        <p>Famílias em situação de vulnerabilidade, com foco em crianças e idosos.</p>
-        <img src="imagens/familia.jpg" alt="Família boliviana" />
+      <div class="card">
+        <div class="image ajuda2-img"></div>
+        <p>Compartilhe este site com seus contatos</p>
       </div>
-
-      <div id="como" class="secao-conteudo">
-        <h2>Objetivo da Missão</h2>
-        <p>Durante 10 dias os missionarios participarão de atividades como:  
-			<ul>
-			<li><span></span> Apoio a projetos sociais e humanitários</li>
-			<li><span></span> Evangelismo e ações com as crianças </li>
-			<li><span></span> Reformas em espaços comunitários</li>
-			<li><span></span> Cultos e momentos de espiritualidade</li>
-		  </ul> 
-		</p>
-        <img src="imagens/ajuda.jpg" alt="Distribuição de ajuda" />
+      <div class="card">
+        <div class="image ajuda3-img"></div>
+        <p>Contribua com qualquer valor via Pix: <strong>missao@pix.com</strong></p>
       </div>
-
-      <div id="faca-parte" class="secao-conteudo">
-        <h2>Faça parte da missão!</h2>
-        <p>Veja abaixo as formas de colaborar com essa causa:</p>
-
-        <div class="colaboracoes">
-          <div>
-            <h3>🙏 Ajude com oração</h3>
-            <p>Ore pela equipe missionária e pelas vidas que serão alcançadas.</p>
-          </div>
-
-          <div>
-            <h3>📣 Compartilhe este link</h3>
-            <p>Ajude divulgando essa missão em suas redes sociais.</p>
-          </div>
-
-          <div>
-            <h3>💰 Ajude com Pix</h3>
-            <p>Chave Pix: <strong>missao.bolivia@apoio.com</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
