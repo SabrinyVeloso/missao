@@ -33,15 +33,36 @@ function scrollToSection(id) {
   }
 }
 
-
-// Copiar texto
 function copiarTexto(id) {
   const elemento = document.getElementById(id);
   const texto = elemento.textContent.trim();
-  
+
   navigator.clipboard.writeText(texto).then(() => {
-    alert(`Copiado: ${texto}`);
+    mostrarNotificacao("✅ Copiado!");
   }).catch(() => {
-    alert('Não foi possível copiar o texto.');
+    mostrarNotificacao("❌ Erro ao copiar!");
   });
 }
+
+function mostrarNotificacao(mensagem) {
+  const notificacao = document.createElement("div");
+  notificacao.textContent = mensagem;
+  notificacao.style.position = "fixed";
+  notificacao.style.bottom = "30px";
+  notificacao.style.right = "30px";
+  notificacao.style.backgroundColor = "#1B4332";
+  notificacao.style.color = "#fff";
+  notificacao.style.padding = "12px 20px";
+  notificacao.style.borderRadius = "10px";
+  notificacao.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)";
+  notificacao.style.zIndex = "1000";
+  notificacao.style.fontFamily = "'Poppins', sans-serif";
+  notificacao.style.fontSize = "16px";
+
+  document.body.appendChild(notificacao);
+
+  setTimeout(() => {
+    notificacao.remove();
+  }, 2500);
+}
+
