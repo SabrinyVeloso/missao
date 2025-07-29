@@ -152,6 +152,9 @@ body {
   flex: 1 1 250px; /* Mantém bom tamanho no PC */
   max-width: 300px; /* Evita ficar gigante em telas grandes */
   border-radius: 12px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height:1.6;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
 }
