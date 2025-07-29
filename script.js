@@ -24,3 +24,14 @@ setInterval(updateCountdown, 3600000); // atualiza a cada hora
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
+
+// Função copiarTexto fora do scrollToSection
+function copiarTexto(id) {
+  const elemento = document.getElementById(id);
+  const texto = elemento.textContent || elemento.innerText;
+  navigator.clipboard.writeText(texto).then(() => {
+    alert(`Copiado: ${texto}`);
+  }).catch(() => {
+    alert('Não foi possível copiar o texto.');
+  });
+}

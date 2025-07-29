@@ -15,45 +15,96 @@
 
   <nav class="menu">
     <button onclick="scrollToSection('onde')">📍 Onde será?</button>
-    <button onclick="scrollToSection('objetivo')">🎯 Objetivo</button>
+    <button onclick="scrollToSection('objetivo')">🎯 Objetivo da Missão</button>
     <button onclick="scrollToSection('como-ajudar')">❤️ Como Ajudar</button>
   </nav>
 
   <main>
+    
     <section id="onde" class="section">
       <h2>📍 Onde será?</h2>
-      <div class="content">
-        <img src="https://i.imgur.com/nW0qK9V.jpg" alt="Capela na Bolívia">
-        <p>O projeto acontecerá em uma comunidade na Bolívia, onde levaremos esperança e apoio às crianças e famílias locais.</p>
+      <div class="content-horizontal">
+        <div class="texto-onde">
+          <p>
+            A missão será realizada de <strong>08 a 18 de outubro de 2025</strong>, na cidade de <strong>Cochabamba, Bolívia</strong>.<br><br>
+            Durante esses dez dias, os missionários farão atividades no <strong>Orfanato L'Esperance</strong> e participarão de ações na <strong>Universidade Adventista da Bolívia</strong>.
+          </p>
+        </div>
+        <div class="imagem-onde">
+          <img src="cochabamba.png" alt="Mapa de Cochabamba, Bolívia">
+        </div>
       </div>
     </section>
+    
 
     <section id="objetivo" class="section">
       <h2>🎯 Objetivo</h2>
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Objetivo da Missão" allowfullscreen></iframe>
+      
+      <section id="objetivo-missao">
+        <h2>Objetivo da Missão</h2>
+        <p>Durante 10 dias os missionários participarão de atividades como:</p>
+        <ul>
+          <li>Apoio a projetos sociais e humanitários</li>
+          <li>Evangelismo e ações com as crianças</li>
+          <li>Reformas em espaços comunitários</li>
+          <li>Cultos e momentos de espiritualidade</li>
+        </ul>
+      </section>
+      
+
+        <div class="video-container">
+          <video controls>
+            <source src="videos/video-missao.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+          </video>
+        </div>
+        
       </div>
     </section>
 
     <section id="como-ajudar" class="section">
       <h2>❤️ Como Ajudar</h2>
-      <div class="cards">
+
+      <div class="container">
+        <div class="cards">
+    
         <div class="card red">
           <h3>🙏 Orando</h3>
-          <p>Ore pela missão, pelos voluntários e pelas vidas que serão impactadas.</p>
+          <p>Ore pela missão, pelos voluntários e por todas as vidas que serão 
+            alcançadas. Sua oração faz a diferença!</p>
         </div>
-        <div class="card yellow">
-          <h3>📢 Compartilhando</h3>
-          <p>Ajude a divulgar essa missão compartilhando em suas redes sociais.</p>
+        <section>
+          <div class="card yellow">
+            <h3>📢 Compartilhando</h3>
+            <p>
+              Ajude a divulgar essa missão compartilhando o link deste site:
+              <span id="linkSite" class="invisivel">https://sabrinyveloso.github.io/missao/</span>
+              <button onclick="copiarTexto('linkSite')" class="btn-copy" data-text="https://sabrinyveloso.github.io/missao/">📋 Copiar Link</button>
+            </p>
+          </div>
+          
+          <div class="card green">
+            <h3>💸 Doando via Pix</h3>
+            <p>
+              Qualquer ajuda é bem-vinda para apoiar a missão.
+              <span id="chavePix" class="invisivel">418.593.028-31</span>
+              <button onclick="copiarTexto('chavePix')" class="btn-copy" data-text="418.593.028-31">📋 Copiar Pix</button>
+            </p>
+          </div>
+          
         </div>
-        <div class="card green">
-          <h3>💸 Doando via Pix</h3>
-          <p>Sua doação pode transformar vidas. Qualquer valor é bem-vindo!</p>
-        </div>
-      </div>
+        </section>
+        
+        <!-- Link para o arquivo JS -->
+        <script src="script.js"></script>
+        
     </section>
   </main>
 
   <script src="script.js"></script>
+  <footer class="footer">
+    <p>“Então ouvi a voz do Senhor, conclamando: 'Quem enviarei? Quem irá por nós?'<br>
+    E eu respondi: Eis-me aqui. Envia-me!”<br><strong>Isaías 6:8</strong></p>
+  </footer>
 </body>
 </html>
