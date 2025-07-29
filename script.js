@@ -1,5 +1,4 @@
 const countdownElement = document.getElementById("countdown");
-
 const missionDate = new Date("2025-10-08T00:00:00").getTime();
 
 function updateCountdown() {
@@ -19,16 +18,18 @@ function updateCountdown() {
 }
 
 updateCountdown();
-setInterval(updateCountdown, 3600000); // atualiza a cada hora
+setInterval(updateCountdown, 3600000);
 
+// Rolar até seção
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Função copiarTexto fora do scrollToSection
+// Copiar texto
 function copiarTexto(id) {
   const elemento = document.getElementById(id);
-  const texto = elemento.textContent || elemento.innerText;
+  const texto = elemento.textContent.trim();
+  
   navigator.clipboard.writeText(texto).then(() => {
     alert(`Copiado: ${texto}`);
   }).catch(() => {

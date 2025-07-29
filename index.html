@@ -4,15 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Missão Bolívia</title>
+
+  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"/>
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  
+  <!-- Cabeçalho -->
   <header class="header">
     <h1>Missão Bolívia</h1>
     <div id="countdown" class="countdown"></div>
   </header>
 
+  <!-- Menu -->
   <nav class="menu">
     <button onclick="scrollToSection('onde')">📍 Onde será?</button>
     <button onclick="scrollToSection('objetivo')">🎯 Objetivo da Missão</button>
@@ -21,6 +28,7 @@
 
   <main>
     
+    <!-- Onde será -->
     <section id="onde" class="section">
       <h2>📍 Onde será?</h2>
       <div class="content-horizontal">
@@ -36,11 +44,11 @@
       </div>
     </section>
     
-
+    <!-- Objetivo -->
     <section id="objetivo" class="section">
       <h2>🎯 Objetivo</h2>
       
-      <section id="objetivo-missao">
+      <div id="objetivo-missao">
         <h2>Objetivo da Missão</h2>
         <p>Durante 10 dias os missionários participarão de atividades como:</p>
         <ul>
@@ -49,62 +57,58 @@
           <li>Reformas em espaços comunitários</li>
           <li>Cultos e momentos de espiritualidade</li>
         </ul>
-      </section>
-      
+      </div>
 
-        <div class="video-container">
-          <video controls>
-            <source src="videos/video-missao.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos.
-          </video>
-        </div>
-        
+      <!-- Vídeo -->
+      <div class="video-container">
+        <video controls>
+          <source src="videos/video-missao.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
       </div>
     </section>
 
+    <!-- Como ajudar -->
     <section id="como-ajudar" class="section">
       <h2>❤️ Como Ajudar</h2>
 
-      <div class="container">
-        <div class="cards">
-    
+      <div class="cards">
+        <!-- Orar -->
         <div class="card red">
           <h3>🙏 Orando</h3>
-          <p>Ore pela missão, pelos voluntários e por todas as vidas que serão 
-            alcançadas. Sua oração faz a diferença!</p>
+          <p>Ore pela missão, pelos voluntários e por todas as vidas que serão alcançadas. Sua oração faz a diferença!</p>
         </div>
-        <section>
-          <div class="card yellow">
-            <h3>📢 Compartilhando</h3>
-            <p>
-              Ajude a divulgar essa missão compartilhando o link deste site:
-              <span id="linkSite" class="invisivel">https://sabrinyveloso.github.io/missao/</span>
-              <button onclick="copiarTexto('linkSite')" class="btn-copy" data-text="https://sabrinyveloso.github.io/missao/">📋 Copiar Link</button>
-            </p>
-          </div>
-          
-          <div class="card green">
-            <h3>💸 Doando via Pix</h3>
-            <p>
-              Qualquer ajuda é bem-vinda para apoiar a missão.
-              <span id="chavePix" class="invisivel">418.593.028-31</span>
-              <button onclick="copiarTexto('chavePix')" class="btn-copy" data-text="418.593.028-31">📋 Copiar Pix</button>
-            </p>
-          </div>
-          
+
+        <!-- Compartilhar -->
+        <div class="card yellow">
+          <h3>📢 Compartilhando</h3>
+          <p>
+            Ajude a divulgar essa missão compartilhando o link deste site:
+            <span id="linkSite" class="invisivel">https://sabrinyveloso.github.io/missao/</span>
+            <button onclick="copiarTexto('linkSite')">📋 Copiar Link</button>
+          </p>
         </div>
-        </section>
-        
-        <!-- Link para o arquivo JS -->
-        <script src="script.js"></script>
-        
+
+        <!-- Doar -->
+        <div class="card green">
+          <h3>💸 Doando via Pix</h3>
+          <p>
+            Qualquer ajuda é bem-vinda para apoiar a missão.
+            <span id="chavePix" class="invisivel">418.593.028-31</span>
+            <button onclick="copiarTexto('chavePix')">📋 Copiar Pix</button>
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Rodapé -->
   <footer class="footer">
     <p>“Então ouvi a voz do Senhor, conclamando: 'Quem enviarei? Quem irá por nós?'<br>
     E eu respondi: Eis-me aqui. Envia-me!”<br><strong>Isaías 6:8</strong></p>
   </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
