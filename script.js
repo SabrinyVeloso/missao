@@ -23,7 +23,16 @@ setInterval(updateCountdown, 3600000);
 // Rolar até seção
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
 }
+
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 
 // Copiar texto
 function copiarTexto(id) {

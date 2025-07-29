@@ -2,54 +2,77 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Missão Bolívia</title>
 
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"/>
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+
   <!-- Cabeçalho -->
-  <header class="header">
+  <header class="header" role="banner">
     <h1>Missão Bolívia</h1>
-    <div id="countdown" class="countdown"></div>
+    <div id="countdown" class="countdown" aria-live="polite"></div>
   </header>
 
   <!-- Menu -->
-  <nav class="menu">
-    <button onclick="scrollToSection('onde')">📍 Onde será?</button>
-    <button onclick="scrollToSection('objetivo')">🎯 Objetivo da Missão</button>
-    <button onclick="scrollToSection('como-ajudar')">❤️ Como Ajudar? </button>
+  <nav class="menu" role="navigation" aria-label="Menu principal">
+    <button type="button" onclick="scrollToSection('informacoes')">👋 Apresentação</button>
+    <button type="button" onclick="scrollToSection('onde')">📍 Onde será?</button>
+    <button type="button" onclick="scrollToSection('objetivo')">🎯 Objetivo da Missão</button>
+    <button type="button" onclick="scrollToSection('como-ajudar')">❤️ Como Ajudar?</button>
   </nav>
 
-  <main>
-    
+  <main role="main">
+
+    <!-- Apresentação -->
+    <section id="informacoes" class="section" tabindex="-1">
+      <h2>👋 Apresentação</h2>
+      <div class="content-horizontal">
+        <div class="imagem-info">
+          <img src="foto.jpeg" alt="Imagem da Missão" />
+        </div>
+        <div class="texto-info">
+          <p>
+            Olá, tudo bem?<br/>
+            Me chamo Sabriny, tenho 17 anos e sou aluna interna no Colégio UNASP, em Engenheiro Coelho.<br/>
+            Neste ano, recebi uma oportunidade única: fui escolhida, junto com outros 13 colegas,
+            para participar de uma missão voluntária na Bolívia 💛<br/><br/>
+            Essa missão é muito mais do que uma viagem, é um chamado para servir, 
+            compartilhar esperança e transformar vidas.<br/>
+            Mas para que eu consiga viver essa experiência e levar minha ajuda a 
+            quem mais precisa, conto com o seu apoio.<br/>
+            Com a sua contribuição, você estará ajudando não apenas a realizar um sonho meu,
+            mas também a levar amor e cuidado a muitas pessoas na Bolívia. 💖 
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Onde será -->
-    <section id="onde" class="section">
+    <section id="onde" class="section" tabindex="-1">
       <h2>📍 Onde será?</h2>
       <div class="content-horizontal">
         <div class="texto-onde">
           <p>
-            A missão será realizada de <strong>08 a 18 de outubro de 2025</strong>, na cidade de <strong>Cochabamba, Bolívia</strong>.<br><br>
+            A missão será realizada de <strong>08 a 18 de outubro de 2025</strong>, na cidade de <strong>Cochabamba, Bolívia</strong>.<br/><br/>
             Durante esses dez dias, os missionários farão atividades no <strong>Orfanato L'Esperance</strong> e participarão de ações na <strong>Universidade Adventista da Bolívia</strong>.
           </p>
         </div>
         <div class="imagem-onde">
-          <img src="cochabamba.png" alt="Mapa de Cochabamba, Bolívia">
+          <img src="cochabamba.png" alt="Mapa de Cochabamba, Bolívia" />
         </div>
       </div>
     </section>
-    
+
     <!-- Objetivo -->
-    <section id="objetivo" class="section">
-      <h2>🎯 Objetivo</h2>
-      
+    <section id="objetivo" class="section" tabindex="-1">
+      <h2>🎯 Objetivo da Missão</h2>
       <div id="objetivo-missao">
-        <h2>Objetivo da Missão</h2>
         <p>Durante 10 dias os missionários participarão de atividades como:</p>
         <ul>
           <li>Apoio a projetos sociais e humanitários</li>
@@ -58,54 +81,64 @@
           <li>Cultos e momentos de espiritualidade</li>
         </ul>
       </div>
-
-      <!-- Vídeo -->
       <div class="video-container">
         <video controls>
-          <source src="video-missao.mp4" type="video/mp4">
+          <source src="video-missao.mp4" type="video/mp4" />
           Seu navegador não suporta vídeos.
         </video>
       </div>
     </section>
 
-    <!-- Como ajudar -->
-    <section id="como-ajudar" class="section">
-      <h2>❤️ Como Ajudar</h2>
+ 
+  
 
+    <!-- Instagram do Orfanato -->
+    <div class="instagram-link">
+      <a href="https://www.instagram.com/l.esperance_bolivia" target="_blank" 
+      rel="noopener noreferrer" aria-label="Instagram do orfanato L'Esperance">
+        <img src="insta.jpg" alt="Logo Instagram" style="width: 20px; vertical-align: middle;" />
+        <span>Instagram do orfanato L'Esperance</span>
+      </a>
+    </div>
+
+    <!-- Como ajudar -->
+    <section id="como-ajudar" class="section" tabindex="-1">
+      <h2>❤️ Como Ajudar</h2>
       <div class="cards">
-        <!-- Orar -->
-        <div class="card red">
+        <article class="card red" tabindex="0" aria-label="Orando">
           <h3>🙏 Orando</h3>
           <p>Ore pela missão, pelos voluntários e por todas as vidas que serão alcançadas. Sua oração faz a diferença!</p>
-        </div>
+        </article>
 
-        <!-- Compartilhar -->
-        <div class="card yellow">
+        <article class="card yellow" tabindex="0" aria-label="Compartilhando">
           <h3>📢 Compartilhando</h3>
           <p>
             Ajude a divulgar essa missão compartilhando o link deste site:
             <span id="linkSite" class="invisivel">https://sabrinyveloso.github.io/missao/</span>
-            <button onclick="copiarTexto('linkSite')">📋 Copiar Link</button>
+            <button type="button" onclick="copiarTexto('linkSite')" aria-label="Copiar link do site">📋 Copiar Link</button>
           </p>
-        </div>
+        </article>
 
-        <!-- Doar -->
-        <div class="card green">
+        <article class="card green" tabindex="0" aria-label="Doando via Pix">
           <h3>💸 Doando via Pix</h3>
           <p>
-            Qualquer ajuda é bem-vinda para apoiar a missão.
+            Qualquer ajuda é bem-vinda para me apoiar na missão.
             <span id="chavePix" class="invisivel">418.593.028-31</span>
-            <button onclick="copiarTexto('chavePix')">📋 Copiar Pix</button>
+            <button type="button" onclick="copiarTexto('chavePix')" aria-label="Copiar chave Pix">📋 Copiar Pix</button>
           </p>
-        </div>
+        </article>
       </div>
     </section>
+
   </main>
 
   <!-- Rodapé -->
-  <footer class="footer">
-    <p>“Então ouvi a voz do Senhor, conclamando: 'Quem enviarei? Quem irá por nós?'<br>
-    E eu respondi: Eis-me aqui. Envia-me!”<br><strong>Isaías 6:8</strong></p>
+  <footer class="footer" role="contentinfo">
+    <p>
+      “Então ouvi a voz do Senhor, conclamando: 'Quem enviarei? Quem irá por nós?'<br/>
+      E eu respondi: Eis-me aqui. Envia-me!”<br/>
+      <strong>Isaías 6:8</strong>
+    </p>
   </footer>
 
   <!-- JS -->
