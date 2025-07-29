@@ -159,6 +159,9 @@ body {
   transition: transform 0.2s ease;
 }
 
+.card h3 {
+  font-size:1.4rem;
+}
 .card:hover {
   transform: translateY(-4px);
 }
@@ -179,6 +182,10 @@ body {
   .card {
     width: 90%; /* Ocupa quase toda a tela no mobile */
     max-width: none;
+    font-size:1.2rem;
+  }
+  .card h3{
+    font-size:1.6rem;
   }
 }
 
