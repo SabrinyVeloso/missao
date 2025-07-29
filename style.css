@@ -139,20 +139,20 @@ body {
 /* Cartões */
 .cards {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: center;
+  align-items: center;
   gap: 20px;
-  margin: 20px auto; 
-  justify-content: center;
-  max-width: 1000px;
-  padding: 0 10px;
+  width: 1000px;
+
 
 }
 
 .card {
   background-color: #f0e7e2;
-  width: 280px;
+  width: 90%;
+  max-width:500px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
