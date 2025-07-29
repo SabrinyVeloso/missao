@@ -3,81 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Missão na Bolívia</title>
+  <title>Missão Bolívia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="topo">
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <h1>Missão na Bolívia</h1>
+  <header class="header">
+    <h1>Missão Bolívia</h1>
+    <div id="countdown" class="countdown"></div>
   </header>
 
-  <div class="container">
-    <nav class="menu-lateral" id="menuLateral">
-      <ul>
-        <li><button onclick="mostrarConteudo('para-onde')">Para onde vamos?</button></li>
-        <li><button onclick="mostrarConteudo('quem')">Quem iremos ajudar?</button></li>
-        <li><button onclick="mostrarConteudo('como')">Como iremos ajudar?</button></li>
-        <li><button onclick="mostrarConteudo('faca-parte')">Faça parte da missão!</button></li>
-      </ul>
-    </nav>
+  <nav class="menu">
+    <button onclick="scrollToSection('onde')">📍 Onde será?</button>
+    <button onclick="scrollToSection('objetivo')">🎯 Objetivo</button>
+    <button onclick="scrollToSection('como-ajudar')">❤️ Como Ajudar</button>
+  </nav>
 
-    <section class="conteudo">
-      <div id="para-onde" class="secao-conteudo">
-        <h2>Para onde vamos?</h2>
-        <p>A missão terá inicio no dia 08/10/2025 e finalizada no dia 18/10/2025.
-		Durante esses 10 dias os missionarios darão assistencia para o Orfanato L'Esperance 
-		em Cochabamba, na Bolívia. Os alunos também farão atividades na Universidade Adventista da Bolívia,
-		 localizada em Cochabamba
-		</p>
-    <div>
-        <img src="mapa.jpg" alt="Mapa da Bolívia" />
-      
+  <main>
+    <section id="onde" class="section">
+      <h2>📍 Onde será?</h2>
+      <div class="content">
+        <img src="https://i.imgur.com/nW0qK9V.jpg" alt="Capela na Bolívia">
+        <p>O projeto acontecerá em uma comunidade na Bolívia, onde levaremos esperança e apoio às crianças e famílias locais.</p>
       </div>
+    </section>
 
-      <div id="quem" class="secao-conteudo">
-        <h2>Quem iremos ajudar?</h2>
-        <p>Famílias em situação de vulnerabilidade, com foco em crianças e idosos.</p>
-        <img src="imagens/familia.jpg" alt="Família boliviana" />
+    <section id="objetivo" class="section">
+      <h2>🎯 Objetivo</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Objetivo da Missão" allowfullscreen></iframe>
       </div>
+    </section>
 
-      <div id="como" class="secao-conteudo">
-        <h2>Objetivo da Missão</h2>
-        <p>Durante 10 dias os missionarios participarão de atividades como:  
-			<ul>
-			<li><span></span> Apoio a projetos sociais e humanitários</li>
-			<li><span></span> Evangelismo e ações com as crianças </li>
-			<li><span></span> Reformas em espaços comunitários</li>
-			<li><span></span> Cultos e momentos de espiritualidade</li>
-		  </ul> 
-		</p>
-        <img src="imagens/ajuda.jpg" alt="Distribuição de ajuda" />
-      </div>
-
-      <div id="faca-parte" class="secao-conteudo">
-        <h2>Faça parte da missão!</h2>
-        <p>Veja abaixo as formas de colaborar com essa causa:</p>
-
-        <div class="colaboracoes">
-          <div>
-            <h3>🙏 Ajude com oração</h3>
-            <p>Ore pela equipe missionária e pelas vidas que serão alcançadas.</p>
-          </div>
-
-          <div>
-            <h3>📣 Compartilhe este link</h3>
-            <p>Ajude divulgando essa missão em suas redes sociais.</p>
-          </div>
-
-          <div>
-            <h3>💰 Ajude com Pix</h3>
-            <p>Chave Pix: <strong>missao.bolivia@apoio.com</strong></p>
-          </div>
+    <section id="como-ajudar" class="section">
+      <h2>❤️ Como Ajudar</h2>
+      <div class="cards">
+        <div class="card red">
+          <h3>🙏 Orando</h3>
+          <p>Ore pela missão, pelos voluntários e pelas vidas que serão impactadas.</p>
+        </div>
+        <div class="card yellow">
+          <h3>📢 Compartilhando</h3>
+          <p>Ajude a divulgar essa missão compartilhando em suas redes sociais.</p>
+        </div>
+        <div class="card green">
+          <h3>💸 Doando via Pix</h3>
+          <p>Sua doação pode transformar vidas. Qualquer valor é bem-vindo!</p>
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
